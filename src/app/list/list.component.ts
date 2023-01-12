@@ -9,11 +9,11 @@ import { Component } from '@angular/core';
 export class ListComponent {
   name = 'Emily';
   items = [
-    { note: 'item 1' },
-    { note: 'item 2' },
-    { note: 'item 3' },
-    { note: 'item 4' },
-    { note: 'item 5' },
-    { note: 'item 6' },
+    { note: 'item 1', clicked: false },
+    { note: 'item 2', clicked: false },
+    { note: 'item 3', clicked: false },
+    { note: 'item 4', clicked: false },
+    { note: 'item 5', clicked: false },
+    { note: 'item 6', clicked: false },
   ];
 }

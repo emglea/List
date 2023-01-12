@@ -1,4 +1,4 @@
-<style>
+<!--<style>
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -293,23 +293,23 @@
       visibility: hidden;
     }
   }
-</style>
+</style>-->
 
-<div class="content" role="main">
-  <app-list></app-list>
-  <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
-    <!-- this is defined in app.component.ts -->
-    <span>{{ title }} app is running!</span>
-  </div>
+<!--<div class="content" role="main">-->
+<app-list></app-list>
+<!-- Highlight Card -->
+<!--<div class="card highlight-card card-small">-->
+<!-- this is defined in app.component.ts -->
+<!--<span>{{ title }} app is running!</span>
+  </div>-->
 
-  <!-- #selection creates a local selection variable that provides access to the input instance in the current template -->
-  <input type="hidden" #selection />
+<!-- #selection creates a local selection variable that provides access to the input instance in the current template -->
+<!--<input type="hidden" #selection />-->
 
-  <div class="card-container">
-    <!-- selection is the variable defined in the input tag above; value is an attribute of the html input element -->
-    <!-- below is an example of event binding: on click, 'test' will appear in the terminal -->
-    <button
+<!--<div class="card-container">-->
+<!-- selection is the variable defined in the input tag above; value is an attribute of the html input element -->
+<!-- below is an example of event binding: on click, 'test' will appear in the terminal -->
+<!--<button
       class="card card-small"
       (click)="selection.value = 'test'"
       tabindex="0"
@@ -323,15 +323,15 @@
     >
       <span>Get Angular config info</span>
     </button>
-  </div>
+  </div>-->
 
-  <!-- Terminal -->
-  <!-- [ngSwitch] is a directive specifying an expression to match against (selection.value) -->
-  <!-- the expressions to match against are provided by *ngSwitchCase -->
-  <div class="terminal" [ngSwitch]="selection.value">
+<!-- Terminal -->
+<!-- [ngSwitch] is a directive specifying an expression to match against (selection.value) -->
+<!-- the expressions to match against are provided by *ngSwitchCase -->
+<!--<div class="terminal" [ngSwitch]="selection.value">
     <pre *ngSwitchCase="'test'">ng test</pre>
     <pre *ngSwitchCase="'config'">ng config</pre>
   </div>
 </div>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet>-->

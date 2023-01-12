@@ -1,7 +1,23 @@
 <div>
   <p>{{ name }}&apos;s List</p>
-
-  <ul>
-    <li *ngFor="let item of items">{{ item.note }}</li>
-  </ul>
+  <input type="hidden" />
+  <mat-list>
+    <mat-list-item
+      *ngFor="let item of items"
+      (pointerdown)="item.clicked = true"
+      (pointerup)="item.clicked = false"
+    >
+      <div
+        [ngStyle]="{
+          display: 'flex',
+          'flex-direction': 'row',
+          'justify-content': 'space-between',
+          'background-color': item.clicked ? 'green' : 'white'
+        }"
+      >
+        {{ item.note }}
+        <mat-icon class="{'position': 'absolute', 'top': 0}">favorite</mat-icon>
+      </div></mat-list-item
+    >
+  </mat-list>
 </div>
