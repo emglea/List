@@ -1,23 +1,28 @@
 <div>
-  <p>{{ name }}&apos;s List</p>
-  <input type="hidden" />
-  <mat-list>
-    <mat-list-item
+  <mat-list [ngStyle]="{ width: '300px' }">
+    <button
+      name="{{ item.id }}"
+      mat-list-item
+      [ngStyle]="{
+        'background-color': item.clicked ? '#F8F9F9' : '#EAEDED',
+        'border-style': 'none'
+      }"
       *ngFor="let item of items"
       (pointerdown)="item.clicked = true"
       (pointerup)="item.clicked = false"
+      [routerLink]="['/item', item.id]"
     >
       <div
         [ngStyle]="{
           display: 'flex',
           'flex-direction': 'row',
-          'justify-content': 'space-between',
-          'background-color': item.clicked ? 'green' : 'white'
+          'justify-content': 'space-between'
         }"
       >
         {{ item.note }}
-        <mat-icon class="{'position': 'absolute', 'top': 0}">favorite</mat-icon>
-      </div></mat-list-item
-    >
+        <!-- when pressed, remove the item from the list-->
+        <button><mat-icon>delete</mat-icon></button>
+      </div>
+    </button>
   </mat-list>
 </div>

@@ -296,7 +296,6 @@
 </style>-->
 
 <!--<div class="content" role="main">-->
-<app-list></app-list>
 <!-- Highlight Card -->
 <!--<div class="card highlight-card card-small">-->
 <!-- this is defined in app.component.ts -->
@@ -332,6 +331,6 @@
     <pre *ngSwitchCase="'test'">ng test</pre>
     <pre *ngSwitchCase="'config'">ng config</pre>
   </div>
-</div>
-
-<router-outlet></router-outlet>-->
+</div>-->
+<!-- this needs to be in your bootstrapped component or routing won't work-->
+<router-outlet></router-outlet>
